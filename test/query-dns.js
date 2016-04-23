@@ -4,7 +4,7 @@
  * Copyright(c) 2016 LnsooXD <LnsooXD@gmail.com>
  * MIT Licensed
  */
-const dnsAddr = '223.5.5.5';
+const dnsAddr = '8.8.8.8';
 
 describe('DNS Query', function () {
   it('Query a DNS from ' + dnsAddr + 'should no error', function (done) {
