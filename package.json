@@ -9,14 +9,16 @@
     "url": "https://github.com/LnsooXD/dns-server.git"
   },
   "keywords": [],
-  "main": "not.js",
+  "main": "index.js",
   "scripts": {
     "test": "node --harmony ./node_modules/.bin/_mocha test/*"
   },
   "dependencies": {
     "co": "^4.6.0",
+    "debug": "^2.2.0",
     "dnsd": "^0.9.6",
     "is-type-of": "^1.0.0",
+    "koa-compose": "^2.4.0",
     "koa.io": "0.0.3",
     "native-dns": "^0.7.0",
     "not-type-of": "^1.0.0"
@@ -30,7 +32,9 @@
     "iojs": ">= 1.0.0"
   },
   "files": [
+    "index.js",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "lib"
   ]
 }
