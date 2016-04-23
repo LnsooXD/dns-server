@@ -14,7 +14,8 @@ const dnsAddrs = [
 
 const mod = require('../');
 const DnsTransmitService = mod.DnsTransmitService;
-const quertDirectMiddleware = mod.getInternalMiddleware('query-from-dns');
+const queryDirectMiddleware = mod.getInternalMiddleware('query-from-dns');
+const queryFromTransmit = mod.getInternalMiddleware('query-from-transmit-service');
 const jsonResultPostware = mod.getInternalPostware('json-result');
 
 function testInLocal() {
@@ -24,9 +25,19 @@ function testInLocal() {
     method: 'GET'
   });
 
-  service.use(quertDirectMiddleware(dnsAddrs));
+  service.use(queryDirectMiddleware(dnsAddrs));
   service.post(jsonResultPostware);
   service.start();
+
+  const service1 = new DnsTransmitService({
+    port: 3153,
+    host: '127.0.0.1',
+    method: 'GET'
+  });
+
+  service1.use(queryFromTransmit(service));
+  service1.post(jsonResultPostware);
+  service1.start();
 }
 
-// testInLocal();
+//testInLocal();
