@@ -31,9 +31,19 @@ function testInLocal() {
   service.start();
 
   const service1 = new DnsTransmitService({
-    port: 5354,
+    port: 53,
     host: '127.0.0.1',
-    method: 'DNS'
+    method: 'DNS',
+    zone: {
+      zone: 'lnsoo.com',
+      server: 'ns.lnsoo.con',
+      admin: 'LnsooXD@gmail.com',
+      serial: 'now',
+      refresh: '2h',
+      retry: '30m',
+      expire: '2w',
+      ttl: '10m'
+    }
   });
 
   service1.use(queryFromTransmit(service));
