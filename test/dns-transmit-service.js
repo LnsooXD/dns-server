@@ -19,7 +19,7 @@ const queryFromTransmit = mod.getInternalMiddleware('query-from-transmit-service
 const jsonResultPostware = mod.getInternalPostware('json-result');
 const transformResultFoDns = mod.getInternalMiddleware('adapt-result-for-dnsd');
 
-function testInLocal() {
+function localTest() {
   const service = new DnsTransmitService({
     port: 3053,
     host: '127.0.0.1',
@@ -51,4 +51,4 @@ function testInLocal() {
   service1.start();
 }
 
-testInLocal();
+//localTest();
