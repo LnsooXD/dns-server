@@ -76,31 +76,4 @@ function localTest() {
   service1.start();
 }
 
-localTest();
-
-// const crypto = require('crypto');
-
-
-// var data = "156156165152165156156";
-// console.log('Original cleartext: ' + data);
-// var key = '78541561566';
-// //var cipherEncoding = 'hex';
-// //If the next line is uncommented, the final cleartext is wrong.
-// var cipherEncoding = 'base64';
-// const cipher = crypto.createCipher('aes192', key);
-//
-// var cipherChunks = [];
-// cipherChunks.push(cipher.update(data, 'utf8', 'base64'));
-// cipherChunks.push(cipher.final('base64'));
-// console.log(cipherEncoding + ' ciphertext: ' + cipherChunks.join(''));
-//
-// // var decipher = crypto.createDecipheriv(algorithm, key, iv);
-// // var plainChunks = [];
-// // for (var i = 0; i < cipherChunks.length; i++) {
-// //   plainChunks.push(decipher.update(cipherChunks[i], cipherEncoding, clearEncoding));
-// //
-// // }
-// // plainChunks.push(decipher.final(clearEncoding));
-// // console.log("UTF8 plaintext deciphered: " + plainChunks.join(''));
-//
-
+// localTest();
