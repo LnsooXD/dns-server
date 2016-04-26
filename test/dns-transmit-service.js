@@ -48,7 +48,7 @@ function localTest() {
     port: 5354,
     host: '127.0.0.1',
     method: 'DNS',
-    zone: {
+    zones: [{
       zone: 'lnsoo.com',
       server: 'ns.lnsoo.con',
       admin: 'LnsooXD@gmail.com',
@@ -57,20 +57,20 @@ function localTest() {
       retry: '30m',
       expire: '2w',
       ttl: '10m'
-    }
+    }]
   });
 
   let cache = new dnsCache({
     zone: 'lnsoo.com'
   });
 
-  service1.use(queryFromCache(cache));
+  // service1.use(queryFromCache(cache));
   service1.use(queryFromTransmit(service));
-  service1.use(saveToCache(cache));
+  // service1.use(saveToCache(cache));
 
   service1.post(transformResultFoDns);
 
   service1.start();
 }
 
-localTest();
+// localTest();
