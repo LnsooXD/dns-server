@@ -36,7 +36,8 @@ function localTest() {
   const serviceOpts = {
     port: 3053,
     host: '127.0.0.1',
-    method: 'GET'
+    method: 'GET',
+    requestEncode: 'hex'
   };
 
   const service = new DnsTransmitService(serviceOpts);
