@@ -30,7 +30,7 @@ describe('DnsQuery', function () {
 
     co(function*() {
       let res = yield query.query('www.baidu.com', 'A');
-      should(res).have.property('data');
+      should(res).have.property('answer');
       done();
     }).catch(function (e) {
       done(e);
@@ -50,7 +50,7 @@ describe('DnsQuery', function () {
     co(function*() {
       console.log(query);
       let res = yield query.query('www.baidu.com', 'A');
-      should(res).have.property('data');
+      should(res).have.property('answer');
       done();
     }).catch(function (e) {
       done(e);
