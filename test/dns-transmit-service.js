@@ -21,7 +21,7 @@ const queryFromTransmit = mod.getInternalMiddleware('query-from-transmit-service
 const jsonResultPostware = mod.getInternalPostware('json-result');
 const transformResultFoDns = mod.getInternalPostware('adapt-result-for-dnsd');
 const queryFromCache = mod.getInternalMiddleware('query-from-dns-cache');
-const saveToCache = mod.getInternalMiddleware('save-to-dns-cache');
+const saveToCache = mod.getInternalPostware('save-to-dns-cache');
 const aesCipher = mod.getInternalPostware('encrypt-result');
 
 function localTest() {
@@ -70,8 +70,8 @@ function localTest() {
 
   service1.use(queryFromCache(cache));
   service1.use(queryFromTransmit(serviceOpts));
-  service1.use(saveToCache(cache));
 
+  service1.post(saveToCache(cache));
   service1.post(transformResultFoDns);
 
   service1.start();
