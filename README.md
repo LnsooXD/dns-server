@@ -1,2 +1,2 @@
-![Build Status](https://api.travis-ci.org/LnsooXD/dns-server.svg)
+![Build Status](https://travis-ci.org/LnsooXD/dns-transmit-service.svg)
 # dns-server
