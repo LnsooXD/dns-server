@@ -1,12 +1,12 @@
 {
-  "name": "dns-server",
-  "version": "0.0.1",
-  "description": "dns server",
+  "name": "dns-transmit-service",
+  "version": "1.0.0",
+  "description": "a dns transmit service",
   "author": "LnsooXD <lnsooxd@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LnsooXD/dns-server.git"
+    "url": "https://github.com/LnsooXD/dns-transmit-service.git"
   },
   "keywords": [],
   "main": "index.js",
