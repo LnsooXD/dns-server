@@ -1,6 +1,6 @@
 {
   "name": "dns-transmit-service",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a dns transmit service",
   "author": "LnsooXD <lnsooxd@gmail.com>",
   "license": "MIT",
